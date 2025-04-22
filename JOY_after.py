@@ -46,9 +46,9 @@ if st.button("💸 割り勘する"):
             st.subheader("🧮 割り勘結果")
             st.write(f"47代：1人あたり **{n1num} 円（固定）**")
 
+            st.write("Aパターン")
             for label, amt, count in zip(labels, amounts, people):
                 if count > 0:
-                    st.write("Aパターン")
                     st.write(f"{label}：1人あたり **{amt} 円**")
 
             total_collected = fixed_total + sum(a * c for a, c in zip(amounts, people))
@@ -56,6 +56,8 @@ if st.button("💸 割り勘する"):
             st.write(f"💰 実際の合計金額：**{total_collected} 円**")
             st.write(f"🧾 差額：**{total_collected - total} 円**")
 
+            st.markdown("---")
+            st.write("Bパターン")
             for label, amt, count in zip(labels, amounts_2, people):
                 if count > 0:
                     st.write("Bパターン")
