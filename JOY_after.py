@@ -60,7 +60,6 @@ if st.button("💸 割り勘する"):
             st.write("Bパターン")
             for label, amt, count in zip(labels, amounts_2, people):
                 if count > 0:
-                    st.write("Bパターン")
                     st.write(f"{label}：1人あたり **{amt} 円**")
 
             total_collected = fixed_total + sum(a * c for a, c in zip(amounts_2, people))
